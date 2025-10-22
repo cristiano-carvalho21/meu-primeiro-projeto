@@ -2,7 +2,7 @@ import pool from "../db.js";
 
 export  const getLivros = async(req, res) => {
     try {
-        const result = await pool.query('select id,titulo,autor,editora,paginas from livros');
+        const result = await pool.query('select * from livros');
         res.json(result.rows, null, 2);
     } catch (error) {
         console.error('Erro no metodo get', error);
