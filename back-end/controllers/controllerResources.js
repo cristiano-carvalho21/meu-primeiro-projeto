@@ -11,11 +11,6 @@ export  const getLivros = async(req, res) => {
 
 };
 
-//Busca dos livros da 10ª
-export const getLivrosByIdOne = async(req, res) => {
-    const result = await pool.query('select titulo,autor,editora,paginas from livros  where classe_id = 1 ');
-    res.json(result.rows, null, 2);
-};
 
 export const getLivrosById = async(req, res) => {
     try {
@@ -56,17 +51,6 @@ export const deleteLivrosById = async(req, res) => {
         res.status(500).json({error:'Erro interno'});
     }
 
-};
-
-// Busca dos livros da 11ª classe
-export const getLivrosByIdTwo = async(req, res) => {
-    const result = await pool.query('select titulo,autor,editora,paginas from livros  where classe_id = 2 ');
-    res.json(result.rows, null, 2);
-};
-// Busca dos livros da 12ª classe
-export const getLivrosByIdThree = async(req, res) => {
-    const result = await pool.query('select titulo,autor,editora,paginas from livros  where classe_id = 3 ');
-    res.json(result.rows, null, 2);
 };
 
  export const postlivros = async(req, res) => {
