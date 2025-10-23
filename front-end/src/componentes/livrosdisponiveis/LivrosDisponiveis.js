@@ -44,7 +44,7 @@ function LivrosDisponiveis()
                                 livrosFiltrados.map((livro) => (
                                     <Col xs={12} sm={6} md={4} lg={3}>
                                         <div className="card-livros">
-                                            <img className="img-fluid pt-3 mt-3" src="./../imagens/img-primeiras_tags.jpg" alt="" loading="lazy"/>
+                                            <img className="img-fluid pt-3 mt-3" src="./../imagens/img-primeiras_tags.jpg" alt="imagem carregando" loading="lazy"/>
                                             <Link to={livro.caminho}>{livro.titulo}</Link>
                                             <p>{livro.paginas} páginas</p>
                                         </div> 
