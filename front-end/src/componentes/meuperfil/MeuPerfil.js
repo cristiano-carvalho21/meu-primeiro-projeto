@@ -18,8 +18,8 @@ function MeuPerfil ()
                             </Card.Text>
                             <Card.Text className="ms-3">
                                 <span className=" campos-aluno">Nome:</span> <strong> {nome} </strong> <br/>
-                                <span className=" campos-aluno">Sala:</span> <strong>80 Pavilhões</strong> <br/>
-                                <span className=" campos-aluno">Nº Proceso:</span> <strong>71286</strong> <br/>
+                                <span className=" campos-aluno">Sala:</span> <strong></strong> <br/>
+                                <span className=" campos-aluno">Nº Proceso:</span> <strong></strong> <br/>
                             </Card.Text>
                         </div>
                         <Card.Text className="pt-3 ms-3">
@@ -33,19 +33,9 @@ function MeuPerfil ()
                 <h2 className="mt-3" >Dados Pessoais</h2> <hr/>
                 <p>
                     <strong>Nome:</strong> {nome} <br/>
-                    <strong>Filho de:</strong> Hermenegildo Paulo De Carvalho <br/>
-                    <strong>E de:</strong> Massengo Mato Tchingombe Madalena <br/>
-                    <strong>Bilhete de identidade nº:</strong> 007668577LA043 <br/>
-                    <strong>Nascido aos:</strong> 21/06/2006 <br/>
-                    <strong>Natural de:</strong> Maculusso Ingombotas <br/>
-                    <strong>Provincía de:</strong> Luanda <br/>
-                    <strong>Sexo:</strong> Masculino <br/>
-                    <strong>Estado Civil:</strong> Solteiro
-                    
                 </p>
                 <h2 className="mt-3" >Contactos</h2> <hr/>
                 <p>
-                    <strong>Telefone:</strong> 974107262 <br/>
                     <strong>Email:</strong> {email}
                 </p>
                 <h2 className="mt-3" >Segurança</h2> <hr/>
