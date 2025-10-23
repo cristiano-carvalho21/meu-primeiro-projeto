@@ -16,10 +16,11 @@ function Login()
         try {
             const res = await axios.post('http://localhost:8000/api/login', {email,password: senha});
             localStorage.setItem('token', res.data.token);
-            localStorage.setItem('role', res.data.role);
+            localStorage.setItem('categoria', res.data.categoria);
             localStorage.setItem('nome', res.data.nome);
             localStorage.setItem('email', res.data.email);
             localStorage.setItem('password', res.data.password);
+            console.log(res.data.categoria);
             navigate('/home')
         } catch (error) {
             alert('Falha no Login');

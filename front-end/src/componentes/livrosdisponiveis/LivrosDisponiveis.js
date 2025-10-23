@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 function LivrosDisponiveis()
 {
     const [livros, setLivros] = useState([]);
-    const [pesquisa, setPesquisa] = useState([]);
+    const [pesquisa, setPesquisa] = useState('');
 
     useEffect(() => {
         const fetchDados = async() => {
             try {
-                const res = await axios.get('http://localhost:8000/api/livros/');
+                const res = await axios.get('http://localhost:8000/api/livros');
                 setLivros(res.data);
     
             } catch (error) {
@@ -23,7 +23,7 @@ function LivrosDisponiveis()
        fetchDados();
     }, []);
 
-    const livrosFiltrados = pesquisa.trim() === "" ? livros :
+    const livrosFiltrados =  pesquisa.trim() === "" ? livros :
         livros.filter((livro) =>
         livro.titulo.toLowerCase().includes(pesquisa.toLowerCase())
     );

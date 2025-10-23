@@ -10,6 +10,7 @@ function Register()
         const [email, setEmail] = useState('');
         const [senha, setSenha] = useState('');
         const[nome, setNome] = useState('');
+        
         const navigate = useNavigate();
     
         const handRegister = async (e) => {
@@ -43,7 +44,8 @@ function Register()
                             <FloatingLabel controlId="userPassword" label="Insira a sua senha" className="bordas">
                                 <Form.Control type="password" aria-label="password do usuario" value={senha} onChange={(e) => setSenha(e.target.value)}/>
                             </FloatingLabel>
-                        
+
+
                             <Button type="submit" className="mt-5 btn-add center w-50">Cadastrar</Button>
                         </Form>
                         <p className="mt-2">

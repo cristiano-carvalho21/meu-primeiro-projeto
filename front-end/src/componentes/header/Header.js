@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 function Header()
 {
-    const role = localStorage.getItem('role');
+    const categoria = localStorage.getItem('categoria');
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -31,7 +31,7 @@ function Header()
                             <Nav.Link className={styles.guides} as={Link} to="/instituicional">Instituicional</Nav.Link>
                             <NavDropdown title={ <FaUserCircle size={24} color="#ffffff"/> } align="end"> 
                                 <NavDropdown.Item as={Link} to="/meuperfil">Meu Perfil</NavDropdown.Item>
-                                {role === 'admin' && (
+                                {categoria === 'admin' && (
                                     <>
                                         <NavDropdown.Item as={Link} to="/postlivros">Cadastrar Livros</NavDropdown.Item>
                                         <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>

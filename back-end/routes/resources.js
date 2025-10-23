@@ -1,5 +1,5 @@
 import express from 'express';
-import { getLivros, getLivrosById,getLivrosByIdOne, getLivrosByIdThree, getLivrosByIdTwo, postlivros, putLivrosById, deleteLivrosById} from '../controllers/controllerResources.js';
+import { getLivros, getLivrosById,postlivros, putLivrosById, deleteLivrosById} from '../controllers/controllerResources.js';
 
 const router = express.Router();
 

@@ -54,8 +54,8 @@ export const deleteLivrosById = async(req, res) => {
 };
 
  export const postlivros = async(req, res) => {
-    const {titulo,autor,editora,paginas} = req.body;
-    const result = await pool.query('insert into livros (titulo,autor,editora,paginas) values($1,$2,$3,$4)', [titulo,autor,editora,paginas]);
+    const {titulo,autor,editora,paginas,caminho} = req.body;
+    const result = await pool.query('insert into livros (titulo,autor,editora,paginas,caminho) values($1,$2,$3,$4,$5)', [titulo,autor,editora,paginas,caminho]);
     res.json(result.rows, null, 2);
  };
 

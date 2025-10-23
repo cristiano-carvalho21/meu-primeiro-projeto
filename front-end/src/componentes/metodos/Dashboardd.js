@@ -50,7 +50,7 @@ function Dashboard()
 
     const abrirModalDelete = (livro) => {
         setLivroSelecionado(livro);
-        //setDado(livro.titulo);
+        setDado(livro.titulo);
         setShowModalDelete(true);
     } 
     const excluirLivro = async () => {
@@ -89,11 +89,11 @@ function Dashboard()
                     <tbody>
                         {livros.map((livro) =>(
                             <tr>
-                                <td> {livro.id} </td>
-                                <td> {livro.titulo} </td>
-                                <td> {livro.autor} </td>
-                                <td> {livro.paginas} </td>
-                                <td> {livro.editora} </td>
+                                <td className="text-center"> {livro.id} </td>
+                                <td className="text-center"> {livro.titulo} </td>
+                                <td className="text-center"> {livro.autor} </td>
+                                <td className="text-center"> {livro.paginas} </td>
+                                <td className="text-center"> {livro.editora} </td>
                                 <td className="d-flex gap-3 text-center justify-content-center">
                                     <Button className="btn-secondary" onClick={() => abrirModalEdit(livro)} >Editar </Button>
                                     <Button className="btn-danger" onClick={() => abrirModalDelete(livro)}>Excluir</Button>
@@ -121,11 +121,11 @@ function Dashboard()
                             <FloatingLabel controlId="dataPaginas" label="Informe a quantidade de páginas do livro" className="bordas mb-3">
                                 <Form.Control type="number" name="paginas" aria-label="numero de paginas do livro" value={editando.paginas} onChange={handleChange}/>
                             </FloatingLabel>
-                            <Button type="submit">Editar</Button>
+                            <Button type="submit" className="btn-success">Editar</Button>
                         </Form>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={fecharModalEdit}>Cancelar</Button>
+                        <Button onClick={fecharModalEdit} className="btn-danger">Cancelar</Button>
                     </Modal.Footer>
                 </Modal>
 
@@ -137,8 +137,8 @@ function Dashboard()
                         Tens a certeza que pretendes excluir este livro ?
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={fecharModalDelete}>Cancelar</Button>
-                        <Button onClick={excluirLivro}>Deletar</Button>
+                        <Button onClick={fecharModalDelete} className="btn-success">Cancelar</Button>
+                        <Button onClick={excluirLivro} className="btn-danger">Deletar</Button>
                     </Modal.Footer>
                 </Modal>
 

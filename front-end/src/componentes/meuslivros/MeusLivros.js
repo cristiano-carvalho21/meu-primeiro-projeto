@@ -32,8 +32,8 @@ function MeusLivros()
                                 </Row>
                             </Modal.Body>
                             <Modal.Footer>
-                                <Button onClick={fecharModal}>Cancelar</Button>
-                                <Button>Adicionar</Button>
+                                <Button onClick={fecharModal} className="btn-secondary">Cancelar</Button>
+                                <Button className="btn-success">Adicionar</Button>
                             </Modal.Footer>
                         </Modal>
                     </Col>

@@ -7,7 +7,8 @@ import { MdPerson } from "react-icons/md";
 function Home()
 {
     const nome = localStorage.getItem('nome');
-    
+    const categoria = localStorage.getItem('categoria');
+    const cat =  (categoria !=='' ? categoria : 'usuário');
     return(
         <div>
             <Container className="d-flex flex-column ms-auto">
@@ -16,7 +17,7 @@ function Home()
                         <Card className=" d-flex shadow-sm mt-5 ms-auto card-aluno rounded " style={{width:'260px'}}>
                             <Card.Body className="d-flex">
                                 <MdPerson size={60}/>
-                                <Card.Text className="campos-aluno ms-2" >{nome}</Card.Text>
+                                <Card.Text className="campos-aluno ms-2" >{nome} <br/> {cat}</Card.Text>
                             </Card.Body>
                         </Card>
                     

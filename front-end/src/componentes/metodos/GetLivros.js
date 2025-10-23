@@ -10,7 +10,7 @@ function GetLivros(){
     useEffect(() => {
         const fetchDados = async() => {
             try {
-                const res = await axios.get('http://localhost:8000/api/livros/classe/1');
+                const res = await axios.get('http://localhost:8000/api/livros');
                 setLivros(res.data);
                 
             } catch (error) {

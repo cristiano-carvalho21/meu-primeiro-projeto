@@ -11,12 +11,13 @@ function PostLivros()
     const [paginas, setPaginas] = useState('');
     const [editora, setEditora] = useState('');
     const [caminho, setCaminho] = useState('');
+
     const navigate = useNavigate();
 
     const handRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/api/livros/cadastro',{titulo,autor,paginas,editora});
+            await axios.post('http://localhost:8000/api/livros/cadastro',{titulo,autor,paginas,editora,caminho});
             alert('Livro cadastrado com sucesso');
             navigate('/dashboard');
         } catch (error) {
@@ -48,7 +49,7 @@ Formato do livroTamanho do livro, disponível para download(booleano), status
                             <FloatingLabel controlId="dataPaginas" label="Informe a quantidade de páginas do livro" className="bordas mb-3">
                                 <Form.Control type="number" aria-label="numero de paginas do livro" value={paginas} onChange={(e) => setPaginas(e.target.value)}/>
                             </FloatingLabel>
-                            <FloatingLabel controlId="dataEditora" label="Informe o caminho/localização do livro" className="bordas mb-3">
+                            <FloatingLabel controlId="dataCaminho" label="Informe o caminho/localização do livro" className="bordas mb-3">
                                 <Form.Control type="text" aria-label="caminho do livro" value={caminho} onChange={(e) => setCaminho(e.target.value)}/>
                             </FloatingLabel>
 
