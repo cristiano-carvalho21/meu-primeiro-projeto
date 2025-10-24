@@ -17,12 +17,8 @@ const pool = new Pool({
 });
 
 async function inserirUsuario() {
-    try {
-        const result = await pool.query(
-            'INSERT INTO usuarios (nome, email, senha,categoria) VALUES ($1, $2, $3, $4) RETURNING *',
-            ['Cristiano Carvalho', 'cristianocarvalh207@gmail.com', 'Madalena76','adm']
-        );
-
+ 
+try{
         console.log('Usuário inserido com sucesso:');
         console.log(result.rows[0]);
 
