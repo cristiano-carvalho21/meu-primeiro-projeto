@@ -16,15 +16,5 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-async function inserirUsuario() {
- 
-try{
-        console.log('Usuário inserido com sucesso:');
-        console.log(result.rows[0]);
 
-        await pool.end(); // fecha a conexão
-    } catch (err) {
-        console.error('Erro ao inserir usuário:', err);
-    }
-}
 export default pool;
